@@ -6,10 +6,9 @@ Atomic transactions are the backbone of relational databases. ACID-compliant dat
 The short answer is that ACID, an acronym for “Atomicity, Consistency, Isolation, and Durability,” is a set of principles that ensure database transactions are processed reliably. When any data storage system upholds those principles, it is said to be ACID compliant.
 #
 Sequelize supports two ways of using transactions:
-1. Unmanaged transactions
-2. Managed transactions
-
-<b>Unmanaged transactions:</b>
+<br>
+<br>
+<b>1- Unmanaged transactions:</b>
 <br>
 Committing and rolling back the transaction should be done manually by the user by calling the Sequelize transaction.commit() & transaction.rollback() methods.
 <p>
@@ -47,7 +46,7 @@ try {
 
 In the above, unmanaged transaction example a User entity is created first & then an Account entry should be created. User manually needs to commit the transaction by calling commit() & if any error occurs roll back the transaction using rollback().
 
-<b>Managed transactions:</b>
+<b>2- Managed transactions:</b>
 <br>
 Sequelize will automatically roll back the transaction if any error is thrown, or commit the transaction otherwise.
 <p>
